@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bulb Togger</title>
+</head>
+<style>
+
+    .img-bulb{
+        width: 100px;
+        height: 100px;
+    }
+
+    .pro-title{
+       text-align: center; 
+    }
+
+    .container{
+        background-color:white ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 250px;
+        margin: 20px auto;
+        padding: 20px;
+    
+    }
+
+    .bulb-btn{
+        width: 250px;
+        display: flex;
+        justify-content: space-between;
+        margin: 20px auto;
+        color :floralwhite;
+    }
+
+    .bulb-btn:hover{
+        padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  background-color: #0056b3;
+  color: #fff;
+  transform: translateY(-2px);
+    }
+
+
+</style>
+<body>
+    <h1 class="pro-title">Bulb Togger</h1>
+<div class="container">
+    <img src="./bulb-off.png" class="img-bulb" id="bulb"/>
+</div>
+
+<div class="bulb-btn">
+    <button onclick="bulbON()">ON</button>
+    <button onclick="bulbOFF()">OFF</button>
+    
+</div>
+
+<script>
+    function bulbON() {
+        const bulbImg = document.getElementById('bulb');
+     bulbImg.src = './bulb-on.png';
+    }
+
+    function bulbOFF() {
+        const bulbImg = document.getElementById('bulb');
+        bulbImg.src = './bulb-off.png';
+    }
+</script>
+</body>
+</html>
